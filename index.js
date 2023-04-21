@@ -3,7 +3,7 @@ const { createSVG } = require("./lib/create-svg");
 const fs = require("fs");
 const { join } = require("path");
 const { writeFile } = require("fs/promises");
-const { validateColor } = require("./lib/validate-color")
+const { validateColor } = require("./lib/validate-color");
 const questions = [
   {
     type: "input",
@@ -31,7 +31,6 @@ const questions = [
   },
 ];
 
-
 const run = async () => {
   try {
     const inquirerResult = await inquirer.prompt(questions);
@@ -46,7 +45,19 @@ const run = async () => {
       return run();
     }
 
-    // if ( validateColor(inquirerResult))
+    if (!validateColor(inquirerResult.textColor)) {
+      console.log(
+        `The color chosen for the text is not valid. Please try again!`
+      );
+      return run();
+    }
+
+    if (!validateColor(inquirerResult.shapeColor)) {
+      console.log(
+        `The color chosen for the shape is not valid. Please try again!`
+      );
+      return run();
+    }
 
     if (text && textColor && shape && shapeColor) {
       const createContent = await createSVG(inquirerResult);
