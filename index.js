@@ -3,7 +3,7 @@ const { createSVG } = require("./lib/create-svg");
 const fs = require("fs");
 const { join } = require("path");
 const { writeFile } = require("fs/promises");
-
+const { validateColor } = require("./lib/validate-color")
 const questions = [
   {
     type: "input",
@@ -31,6 +31,7 @@ const questions = [
   },
 ];
 
+
 const run = async () => {
   try {
     const inquirerResult = await inquirer.prompt(questions);
@@ -38,10 +39,18 @@ const run = async () => {
     console.log(inquirerResult);
 
     const { text, textColor, shape, shapeColor } = inquirerResult;
+    if (inquirerResult.text.length === 0 || inquirerResult.text.length > 4) {
+      console.log(
+        `Make sure the text is no longer than 3 characters! Try again!`
+      );
+      return run();
+    }
+
+    // if ( validateColor(inquirerResult))
 
     if (text && textColor && shape && shapeColor) {
       const createContent = await createSVG(inquirerResult);
-      
+
       await writeFile(
         join(__dirname, `output`, `${text}-logo.svg`),
         createContent
