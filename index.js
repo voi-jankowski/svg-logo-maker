@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const { createSVG } = require("./lib/create-svg");
 const fs = require("fs");
+const { join } = require("path");
+const { writeFile } = require("fs/promises");
 
 const questions = [
   {
@@ -38,8 +40,14 @@ const run = async () => {
     const { text, textColor, shape, shapeColor } = inquirerResult;
 
     if (text && textColor && shape && shapeColor) {
-      console.log(inquirerResult);
       const createContent = await createSVG(inquirerResult);
+      
+      await writeFile(
+        join(__dirname, `output`, `${text}-logo.svg`),
+        createContent
+      );
+
+      console.log(`Created ${text}-logo.svg`);
     }
   } catch (error) {
     console.log(error);
