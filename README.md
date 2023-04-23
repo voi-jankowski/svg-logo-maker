@@ -55,9 +55,11 @@ When you are asked about the shape of your logo, you can select from the list of
 
 Finally answer the question about the desired color for your shape with a valic color name or a hexadecimal number.
 
-After that your new logo will be created as the svg file with the your logo text as the name of the file and saved in `output` folder.
+After that your new logo will be created as the svg file with the name made up of <span style="color: pink;">'your logo's text'</span>`-logo.svg` and saved in `output` folder.
 
 ![Location of the file created.](./assets/images/readme-5.png)
+
+The folder `examples` contains sample SVG files generated using the application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
