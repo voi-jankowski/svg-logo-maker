@@ -115,6 +115,6 @@ The project was created with the help of:
 
 The location of the project [on GitHub](https://github.com/voi-jankowski/svg-logo-maker).
 
-The walkthrough video can be accessed on
+The walkthrough video can be accessed on [here](https://drive.google.com/file/d/15-OeCr41gL0kB4s6pmHtnzjDfuzGc28C/view).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
