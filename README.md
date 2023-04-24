@@ -43,21 +43,21 @@ node index.js
 
 You will be presented with a series of questions about your desired logo. After answering each one press Enter to go to the next question.
 
-![First prompts.](./assets/images/readme-2.png)
+![Invoking the app.](./assets/images/svg-1.png)
 
-When you are asked about the text of your logo you can enter up to three characters. When you are prompted for the color of your text, you can enter a valic color name or a hexadecimal number.
+When you are asked about the text of your logo you can enter up to three characters. When you are prompted for the color of your text, you can enter a valid color name or a hexadecimal number.
 
-![License prompts.](./assets/images/readme-3.png)
+![First prompts.](./assets/images/svg-2.png)
 
 When you are asked about the shape of your logo, you can select from the list of three different shapes.
 
-![Answering with text editor.](./assets/images/readme-4.png)
+![Shape prompt.](./assets/images/svg-3.png)
 
-Finally answer the question about the desired color for your shape with a valic color name or a hexadecimal number.
+Finally answer the question about the desired color for your shape with a valid color name or a hexadecimal number.
 
 After that your new logo will be created as the svg file with the name made up of <span style="color: pink;">'your logo's text'</span>`-logo.svg` and saved in `output` folder.
 
-![Location of the file created.](./assets/images/readme-5.png)
+![Location of the file created.](./assets/images/svg-4.png)
 
 The folder `examples` contains sample SVG files generated using the application.
 
