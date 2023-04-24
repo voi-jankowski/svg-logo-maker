@@ -113,7 +113,7 @@ The project was created with the help of:
 
 ## LInks
 
-The location of the project [on GitHub](https://github.com/voi-jankowski/README-generator).
+The location of the project [on GitHub](https://github.com/voi-jankowski/svg-logo-maker).
 
 The walkthrough video can be accessed on
 
